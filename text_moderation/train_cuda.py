@@ -66,7 +66,8 @@ class MGELTrainingPipeline:
             'finance': 'yahoo_finance_sample.csv',
             'news': 'yahoo_news_sample.csv',
             'toxic_obfuscated': 'toxic_obfuscated_dataset.csv',
-            'openai': 'openai_moderation_1680.csv'
+            'openai': 'openai_moderation_1680.csv',
+            'toxicity_gen': 'toxicity_en.csv'
         }
 
         for name, filename in dataset_files.items():
@@ -692,4 +693,5 @@ Examples:
 
     #python train_cuda.py --mode quick --dataset twitter --ensemble --batch-size 1 --grad-accum 8 --max-length 64 --patience 3
     # python train_cuda.py --mode quick --dataset twitter
+
     # python train_cuda.py --mode quick --dataset twitter --ensemble --epochs 10 --batch-size 2 --grad-accum 4 --patience 3
